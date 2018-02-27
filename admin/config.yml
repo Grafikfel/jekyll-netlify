@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: master
+
+publish_mode: editorial_workflow
+
+media_folder: "uploads"
+
+collections:
+  - name: "post"
+    label: "Post"
+    folder: "_posts"
+    sort: "date:desc"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+    meta:
+      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
