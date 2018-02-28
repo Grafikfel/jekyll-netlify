@@ -1,0 +1,19 @@
+$column-gap: 0.75rem;
+$container-gap: 32px;
+
+$tablet: 769px;
+$desktop: 960px + (2 * $container-gap);
+$widescreen: 1152px + (2 * $container-gap);
+$fullhd: 1344px + (2 * $container-gap);
+
+$breakpoints: (
+  'phone': 320px,
+  'tablet': 769px,
+  'desktop': 1024px,
+  'widescreen': 1216px,
+  'fullhd': 1408px
+) !default;
+
+$section-padding: 3rem 1.5rem;
+$section-padding-medium: 9rem 1.5rem;
+$section-padding-large: 18rem 1.5rem;

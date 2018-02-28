@@ -1,0 +1,19 @@
+.container {
+  margin: 0 auto;
+  position: relative;
+
+  @include media("≥desktop") {
+    max-width: $desktop - (2 * $container-gap);
+    width: $desktop - (2 * $container-gap);
+  }
+
+  @include media("≥widescreen") {
+    max-width: $widescreen - (2 * $container-gap);
+    width: $widescreen - (2 * $container-gap);
+  }
+
+  @include media("≥fullhd") {
+    max-width: $fullhd - (2 * $container-gap);
+    width: $fullhd - (2 * $container-gap);
+  }
+}
