@@ -1,0 +1,29 @@
+---
+layout: page
+title: Blog
+---
+
+<ul>
+{% for post in paginator.posts %}
+  {% unless post.preview %}
+    {% include post-list.html post=post %}
+  {% endunless %}
+{% endfor %}
+</ul>
+
+<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+  {% if paginator.previous_page %}
+  <a class="pagination-previous" href="">Previous</a>
+    {% else %}
+  <a class="pagination-previous" href="" disabled>Previous</a>
+  {% endif %}
+  {% if paginator.next_page %}
+  <a class="pagination-next" href="">Next</a>
+  {% else %}
+  <a class="pagination-next" href="" disabled>Next</a>
+  {% endif %}
+  <ul class="pagination-list">
+    <li>
+      <span class="pagination-link">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span></li>
+  </ul>
+</nav>

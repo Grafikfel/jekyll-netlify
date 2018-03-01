@@ -11,6 +11,12 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 # Markdown settings
 markdown: kramdown
 
+# Pagination settings
+plugins:
+  - jekyll-paginate
+paginate_path: /blog/page:num
+paginate: 10
+
 # Sass settings
 sass:
   add_charset: true

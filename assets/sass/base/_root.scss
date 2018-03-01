@@ -5,3 +5,11 @@ html {
 *, ::before, ::after {
   box-sizing: inherit;
 }
+
+body {
+  font: 1em / 1.5 $font-stack-body;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
