@@ -7,6 +7,8 @@
 }
 
 .pagination {
+  margin: $pagination-margin;
+
   @include media("≥tablet") {
     justify-content: space-between;
   }
@@ -26,7 +28,10 @@
 }
 
 .pagination-list {
+  list-style: none;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 
   @include media("≥tablet") {
     flex-grow: 1;
@@ -39,12 +44,23 @@
 .pagination-previous,
 .pagination-next,
 .pagination-link {
+  font-size: 1em;
   justify-content: center;
+  margin: 0.25rem;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   text-align: center;
+  min-width: 2.25em;
+
+  &[disabled] {
+    opacity: 0.5;
+  }
 }
 
 .pagination-previous,
 .pagination-next {
+  padding-left: 0.75em;
+  padding-right: 0.75em;
   white-space: no-wrap;
 }
 
@@ -57,5 +73,11 @@
 .pagination-next {
   @include media("≥tablet") {
     order: 3;
+  }
+}
+
+.pagination-link {
+  &.is-current {
+
   }
 }

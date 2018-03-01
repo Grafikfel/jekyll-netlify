@@ -17,6 +17,17 @@ plugins:
 paginate_path: /blog/page:num
 paginate: 10
 
+# Posts settings
+permalink: pretty
+
+# Default settings
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
 # Sass settings
 sass:
   add_charset: true

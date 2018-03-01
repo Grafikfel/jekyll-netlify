@@ -11,5 +11,11 @@ layout: default
     <p>{{ page.date | date: "%B %d, %Y" }}</p>
   {% endif %}
 
+  {% if page.thumbnail %}
+  <div class="image">
+    <img src="{{page.thumbnail}}">
+  </div>
+  {% endif %}
+
   {{ content }}
 </article>
