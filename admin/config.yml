@@ -21,3 +21,13 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
     meta:
       - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+  - label:  "Pages"
+    name: "pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: about.md
+        fiels:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: Body, name: body, widget: markdown}
