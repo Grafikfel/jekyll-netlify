@@ -1,0 +1,23 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img src="" alt="">
+      </a>
+
+      <div class="navbar-burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <ul class="navbar-menu">
+      {% for item in site.data.navigation.header %}
+      <li class="navbar-item">
+        <a class="navbar-link" href="{{ item.url }}">{{ item.label }}</a>
+      </li>
+      {% endfor %}
+    </div>
+  </div>
+</nav>

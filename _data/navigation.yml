@@ -1,0 +1,6 @@
+# Navigation
+header:
+- label: Blog
+  url: /blog/
+- label: About
+  url: /about/
