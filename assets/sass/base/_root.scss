@@ -8,6 +8,14 @@ html {
 
 body {
   font: 1em / 1.5 $font-stack-body;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  @include media("≥desktop") {
+    font-size: 1.2em;
+  }
 }
 
 p {

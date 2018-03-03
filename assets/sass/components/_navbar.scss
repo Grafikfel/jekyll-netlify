@@ -1,7 +1,6 @@
 .navbar {
   background-color: $navbar-background;
   min-height: $navbar-height;
-  position: relative;
 
   @include media("≥desktop") {
     align-items: stretch;
@@ -11,9 +10,13 @@
 
   & > .container {
     align-items: stretch;
-    display: flex;
+    display: block;
     min-height: $navbar-height;
     width: 100%;
+
+    @include media("≥desktop") {
+      display: flex;
+    }
   }
 }
 
@@ -28,6 +31,7 @@
   cursor: pointer;
   display: block;
   height: $navbar-height;
+  margin-left: auto;
   position: relative;
   width: $navbar-height;
 
@@ -75,6 +79,7 @@
       }
     }
   }
+
   @include media("≥desktop") {
     display: none;
   }
@@ -82,6 +87,8 @@
 
 .navbar-menu {
   display: none;
+  margin: 0;
+  padding: 0;
 
   @include media("≥desktop") {
     align-items: stretch;
@@ -94,6 +101,8 @@
 .navbar-item,
 .navbar-link {
   display: block;
+  line-height: 1.5;
+  padding: 0.5rem 1rem;
   position: relative;
 
   @include media("≥desktop") {
