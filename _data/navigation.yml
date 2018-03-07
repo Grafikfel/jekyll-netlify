@@ -1,6 +1,14 @@
 # Navigation
 header:
-- label: Blog
-  url: /blog/
 - label: About
   url: /about/
+- label: Motion
+  url: /motion/
+- label: Still
+  url: /still/
+- label: Audio
+  url: /audio/
+- label: Blog
+  url: /blog/
+- label: Contact
+  url: /contact/

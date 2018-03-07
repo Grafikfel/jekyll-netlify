@@ -74,6 +74,9 @@
         flex: none;
         width: ($i / 12) * 100%;
       }
+      &.is-offset-#{$i} {
+        margin-left: ($i / 12) * 100%;
+      }
     }
   }
 }

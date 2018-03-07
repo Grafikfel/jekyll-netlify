@@ -7,8 +7,9 @@
     display: flex;
     min-height: $navbar-height;
   }
+}
 
-  & > .container {
+.navbar > .container {
     align-items: stretch;
     display: block;
     min-height: $navbar-height;
@@ -17,6 +18,15 @@
     @include media("≥desktop") {
       display: flex;
     }
+  }
+
+.navbar > .container,
+.container > .navbar {
+  .navbar-brand {
+      margin-left: -1rem;
+  }
+  .navbar-menu {
+    margin-right: -1rem;
   }
 }
 
@@ -114,6 +124,10 @@
 .navbar-item {
   flex-grow: 0;
   flex-shrink: 0;
+
+  img {
+    max-height: $navbar-item-img-max-height;
+  }
 }
 
 .navbar-link {

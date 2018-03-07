@@ -1,7 +1,7 @@
 $column-gap: 0.75rem;
 $container-gap: 32px;
 
-$font-stack-body: "Helvetica";
+$font-stack-body: "GT Sectra Fine";
 
 $tablet: 769px;
 $desktop: 960px + (2 * $container-gap);
@@ -17,10 +17,24 @@ $breakpoints: (
 ) !default;
 
 $navbar-background: transparent;
-$navbar-height: 48px;
+$navbar-height: 3.25rem;
+$navbar-item-img-max-height: 1.75rem;
 
 $pagination-margin: -0.25rem;
 
 $section-padding: 3rem 1.5rem;
 $section-padding-medium: 9rem 1.5rem;
 $section-padding-large: 18rem 1.5rem;
+
+$size-1: 3rem;
+$size-2: 2.5rem;
+$size-3: 2rem;
+$size-4: 1.5rem;
+$size-5: 1.25rem;
+$size-6: 1rem;
+$size-7: 0.75rem;
+
+$size-small: $size-7;
+$size-normal: $size-6;
+$size-medium: $size-5;
+$size-large: $size-4;
