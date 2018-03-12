@@ -1,9 +1,31 @@
+.post .content {
+  @include media("≥tablet") {
+    columns: 100px 2;
+    column-gap: $column-gap * 2;
+  }
+}
+
 .content {
+  font-weight: 300;
+
   &:not(:last-child) {
     margin-bottom: 1.5rem;
   }
 
-  p,
+  li + li {
+    margin-top: 0.25em;
+  }
+
+  li ol {
+    margin-left: 1em;
+    margin-top: 0.25em;
+  }
+
+  li ul {
+    margin-left: 1em;
+    margin-top: 0.25em;
+  }
+
   dl,
   ol,
   ul,
@@ -15,13 +37,22 @@
     }
   }
 
+  p {
+    text-indent: 1.5em;
+
+    &:first-of-type {
+      font-weight: 500;
+      text-indent: 0;
+    }
+  }
+
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-
+    line-height: $content-heading-line-height;
   }
 
   h1 {
@@ -32,6 +63,7 @@
       margin-top: 1em;
     }
   }
+
   h2 {
     font-size: 1.75em;
     margin-bottom: 0.5714em;
@@ -65,6 +97,65 @@
     margin-bottom: 1em;
   }
 
+  blockquote {
+    background-color: $content-blockquote-background-color;
+    color: $bg-color;
+    font-style: italic;
+    margin: 1em 0;
+    padding: $content-blockquote-padding;
+  }
+
+  ol {
+    list-style: decimal inside;
+    margin-left: 0;
+    margin-top: 1em;
+  }
+
+  ul {
+    list-style: disc inside;
+    margin-left: 0;
+    margin-top: 1em;
+
+    ul {
+      list-style-type: circle;
+      margin-top: 0.5em;
+
+      ul {
+        list-style-type: square;
+      }
+    }
+  }
+
+  dd {
+    margin-left: 2em;
+  }
+
+  figure {
+    margin-left: 2em;
+    margin-right: 2em;
+    text-align: center;
+
+    &:not(:first-child) {
+      margin-top: 2em;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2em;
+    }
+
+    img {
+      display: inline-block;
+    }
+
+    figcaption {
+      font-style: italic
+    }
+  }
+
+  img {
+    margin: 1em 0;
+  }
+
   &.is-small{
     font-size: $size-small;
   }
@@ -75,5 +166,9 @@
 
   &.is-large {
     font-size: $size-large;
+  }
+
+  h5 + p {
+    text-indent: 0;
   }
 }

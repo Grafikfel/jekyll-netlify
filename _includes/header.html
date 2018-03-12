@@ -1,23 +1,23 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar is-fixed" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="">
         <img src="" alt="" height="28" width="112">
       </a>
 
-      <div class="navbar-burger">
+      <div class="navbar-burger" id="navbarBurger" data-target="navbarMenu">
         <span></span>
         <span></span>
         <span></span>
       </div>
     </div>
 
-    <ul class="navbar-menu">
+    <ul class="navbar-menu" id="navbarMenu">
       {% for item in site.data.navigation.header %}
       <li class="navbar-item">
         <a class="navbar-link" href="{{ item.url }}">{{ item.label }}</a>
       </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </nav>

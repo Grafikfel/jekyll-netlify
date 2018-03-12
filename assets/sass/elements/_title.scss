@@ -1,0 +1,49 @@
+.title,
+.subtitle {
+  word-break: break-word;
+
+  em,
+  span {
+    font-weight: inherit;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.title {
+  color: $title-color;
+  font-size: $title-size;
+  // font-weight: $title-weight
+  // line-height: 1.125
+
+  &:not(.is-spaced) + .subtitle {
+    margin-top: -1.5rem;
+  }
+}
+
+.subtitle {
+  color: $subtitle-color;
+  font-size: $subtitle-size;
+  // font-weight: $subtitle-weight
+  // line-height: 1.25
+  
+  &:not(.is-spaced) + .title {
+    margin-top: -1.5rem;
+  }
+}
+
+.is-center {
+  text-align: center;
+}
+
+.post .subtitle {
+  display: block;
+  font-size: $title-size;
+  margin-bottom: 0.5em;
+  
+  &:not(:first-child) {
+      margin-top: 1em;
+    }
+}

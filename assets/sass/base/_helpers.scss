@@ -5,3 +5,11 @@
   -ms-user-select: none;
   user-select: none;
 }
+
+.bd-is-clipped-touch {
+  overflow: hidden !important;
+}
+
+.blur {
+  filter: blur(5px);
+}

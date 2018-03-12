@@ -1,11 +1,14 @@
 <!doctype html>
-<html lang="{{ page.lang|default: 'en' }}">
+<html class="has-navbar-fixed" lang="{{ page.lang|default: 'en' }}">
   {% include head.html %}
-  <body>
+  <body class="{{ page.layout }}">
     {% include header.html %}
-    <main class="main" role="main">
+    <main class="main" role="main" id="main">
       <section class="section">
         <div class="container">
+          <!-- <div id="status">
+            <progress max="7" value="0"></progress>
+          </div> -->
           {{ content }}
         </div>
       </section>

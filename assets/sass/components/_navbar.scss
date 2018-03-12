@@ -1,5 +1,4 @@
 .navbar {
-  background-color: $navbar-background;
   min-height: $navbar-height;
 
   @include media("≥desktop") {
@@ -7,6 +6,26 @@
     display: flex;
     min-height: $navbar-height;
   }
+
+  &.is-fixed {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 30;
+
+    @include media("≤touch") {
+      .navbar-menu {
+        max-height: calc(100vh - #{$navbar-height});
+        overflow: auto;
+        width: 100%;
+      }
+    }
+  }
+}
+
+html.has-navbar-fixed {
+  padding-top: $navbar-height;
 }
 
 .navbar > .container {
@@ -17,6 +36,7 @@
 
     @include media("≥desktop") {
       display: flex;
+      flex-direction: column;
     }
   }
 
@@ -25,6 +45,7 @@
   .navbar-brand {
       margin-left: -1rem;
   }
+
   .navbar-menu {
     margin-right: -1rem;
   }
@@ -34,6 +55,7 @@
   align-items: stretch;
   display: flex;
   flex-shrink: 0;
+  flex-grow: 1;
   min-height: $navbar-height;
 }
 
@@ -52,9 +74,9 @@
     left: calc(50% - 8px);
     position: absolute;
     transform-origin: center;
-    // transition-duration: $speed
+    transition-duration: 80ms;
     transition-property: background-color, opacity, transform;
-    // transition-timing-function: $easing
+    transition-timing-function: ease-out;
     width: 16px;
 
     &:nth-child(1) {
@@ -91,18 +113,40 @@
   }
 
   @include media("≥desktop") {
-    display: none;
+    // display: none;
   }
 }
 
 .navbar-menu {
-  display: none;
   margin: 0;
-  padding: 0;
+
+  @include media("≤touch") {
+    // background-color: $navbar-background;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    opacity: 0;
+    padding: 0.5rem 0;
+    visibility: hidden;
+
+    transition-delay: 0, 200ms, 200ms;
+    transition-duration: 200ms, 0, 0;
+    transition-property: opacity, visibility, height;
+
+    &.is-active {
+      height: 100vh;
+      opacity: 1;
+      visibility: visible;
+
+      transition-delay: 0;
+    }
+  }
 
   @include media("≥desktop") {
     align-items: stretch;
     display: flex;
+    flex-direction: column;
     flex-grow: 1;
     flex-shrink: 0;
   }
@@ -110,7 +154,10 @@
 
 .navbar-item,
 .navbar-link {
-  display: block;
+  align-items: center;
+  background-color: $navbar-background;
+  color: $navbar-item-color;
+  display: flex;
   line-height: 1.5;
   padding: 0.5rem 1rem;
   position: relative;
@@ -122,8 +169,9 @@
 }
 
 .navbar-item {
-  flex-grow: 0;
+  flex-grow: 1;
   flex-shrink: 0;
+  padding: 0;
 
   img {
     max-height: $navbar-item-img-max-height;

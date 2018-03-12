@@ -8,6 +8,7 @@
 @import "vendor/normalize";
 
 @import "base/root";
+@import "base/helpers";
 
 @import "components/navbar";
 @import "components/pagination";
@@ -16,6 +17,8 @@
 @import "elements/content";
 @import "elements/image";
 @import "elements/link";
+@import "elements/list";
+@import "elements/title";
 
 @import "grid/columns";
 

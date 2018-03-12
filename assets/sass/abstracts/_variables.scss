@@ -1,23 +1,30 @@
 $column-gap: 0.75rem;
 $container-gap: 32px;
 
+$bg-color: hsl(60, 8, 90.2);
+$text-color: hsl(0, 0, 9.8);
+
 $font-stack-body: "GT Sectra Fine";
+
 
 $tablet: 769px;
 $desktop: 960px + (2 * $container-gap);
+$touch: $desktop - 1px;
 $widescreen: 1152px + (2 * $container-gap);
 $fullhd: 1344px + (2 * $container-gap);
 
 $breakpoints: (
   'phone': 320px,
   'tablet': 769px,
+  'touch': 1023px,
   'desktop': 1024px,
   'widescreen': 1216px,
   'fullhd': 1408px
 ) !default;
 
-$navbar-background: transparent;
+$navbar-background: $text-color;
 $navbar-height: 3.25rem;
+$navbar-item-color: $bg-color;
 $navbar-item-img-max-height: 1.75rem;
 
 $pagination-margin: -0.25rem;
@@ -38,3 +45,13 @@ $size-small: $size-7;
 $size-normal: $size-6;
 $size-medium: $size-5;
 $size-large: $size-4;
+
+$subtitle-color: hsl(200, 6, 20);
+$subtitle-size: $size-5;
+$title-color: hsl(200, 6, 20);
+$title-size: $size-3;
+
+$content-blockquote-background-color: $title-color;
+$content-blockquote-padding: 1.25em 1.5em;
+
+$content-heading-line-height: 1.125;
